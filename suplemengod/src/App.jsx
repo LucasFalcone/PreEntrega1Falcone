@@ -1,18 +1,33 @@
-import { useState } from 'react'
+import ItemDetailContainer from "./components/ItemDetailContainer";
+import ItemListContainer from "./components/ItemListContainer";
+import Navbar from "./components/Navbar";
+import Contacto from "./components/Contacto";
+import "./main.css";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Footer from "./components/Footer";
 
-
-import Header from './components/Header.jsx'
-import Main from './components/Main.jsx'
-import Footer from './components/Footer.jsx'
 
 function App() {
+
   return (
-    <>
-    <Header/>
-    <Main/>
-    <Footer/> 
-    </>
-  )
+    <div>
+      <BrowserRouter>
+
+        <Navbar />
+
+        <Routes>
+          <Route path="/" element={<ItemListContainer />} />
+          <Route path="/item/:id" element={<ItemDetailContainer />} />
+          <Route path="/productos" element={<ItemListContainer />} />
+          <Route path="/productos/:categoria" element={<ItemListContainer />} />
+          <Route path='/contacto' element={<Contacto />} />
+        </Routes>
+
+        <Footer />
+
+      </BrowserRouter>
+    </div>
+  );
 }
 
-export default App
+export default App;
