@@ -5,7 +5,6 @@
   font-family: sans-serif;
 }
 
-
 .container {
   max-width: 1140px;
   padding-inline: 1.5rem;
@@ -14,6 +13,8 @@
 
 .main-title {
   margin-top: 2rem;
+  font-weight: bold;
+  font-size: 1.5rem;
 }
 
 .navbar {
@@ -21,12 +22,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgb(203 213 225);
 }
 
 .logo {
   text-decoration: none;
-  color: black;
+  font-weight: bold;
 }
 
 .menu {
@@ -114,3 +114,94 @@
   margin-top: 2rem;
   font-weight: 600;
 } 
+
+.item-count {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.item-count button, .agregar-al-carrito, .enviar {
+  background-color: rgb(51 65 85 );
+  border: 0;
+  width: 2rem;
+  height: 2rem;
+  color: white;
+  border-radius: .5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  line-height: 1;
+  border: 2px solid var(--clr-main);
+  transition: .2s;
+}
+
+.item-count button:hover, .agregar-al-carrito:hover, .enviar:hover {
+  background-color: white;
+  color: black;
+}
+
+.agregar-al-carrito, .enviar {
+    width: auto;
+    height: auto;
+    margin-top: 1rem;
+    padding: 1rem;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  align-items: flex-start;
+}
+
+.formulario input {
+  padding: .5rem;
+  width: 18rem;
+  border-radius: .5rem;
+  border: 2px solid black;
+}
+
+.formulario input:focus {
+  outline: 0;
+  border: 2px solid var(--clr-main);
+  outline: 2px solid rgb(51 65 85 );
+}
+
+.vaciar {
+  text-decoration: none;
+  background-color: rgb(51 65 85);
+  color: white;
+  padding: .5rem;
+  width: max-content;
+  border-radius: .5rem;
+  transition: .2s;
+  margin: 2rem;
+}
+
+.vaciar:hover {
+  background-color: black;
+  color: white;
+}
+
+.finalizar-compra {
+  
+  text-decoration: none;
+  background-color: rgb(51 65 85);
+  color: white;
+  padding: .7rem;
+  width: max-content;
+  border-radius: .5rem;
+  transition: .2s;
+  margin: 2rem;
+
+}
+
+.finalizar-compra:hover {
+  background-color: black;
+  color: white;
+}
